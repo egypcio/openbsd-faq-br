@@ -18,7 +18,7 @@ A russian version of the OpenBSD's FAQ and pages is also available on GitHub tha
 
 
 
---
+---
 Brazilian OpenBSD Users Group (https://openbsd-br.org)
 
 https://openbsd-br.org/mailman/listinfo/lista

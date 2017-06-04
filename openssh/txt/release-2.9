@@ -1,0 +1,59 @@
+OpenSSH 2.9 has just been uploaded. It will be available from the
+mirrors listed at http://www.openssh.com/ shortly.
+
+OpenSSH is a 100% complete SSH protocol version 1.3, 1.5 and 2.0
+implementation and includes sftp client and server support.
+
+This release contains many portability bug-fixes (listed in the
+ChangeLog) as well as several new features (listed below).
+
+We would like to thank the OpenSSH community for their continued
+support and encouragement.
+
+Important Changes:
+==================
+
+WARNING: SSH protocol v2 is now the default protocol version
+
+	use the 'Protocol' option from ssh(1) and sshd(8) if
+	you want to change this.
+
+SSH protocol v2 implementation adds support for:
+
+        HostbasedAuthentication, similar to RhostsRSA in SSH protocol
+        v1
+
+        Rekeying (negotiate new encryption keys for the current SSH
+        session, try ~R in interactive SSH sessions)
+
+        updated DH group exchange:
+        	draft-ietf-secsh-dh-group-exchange-01.txt
+
+        client option HostKeyAlgorithms
+
+        server options ClientAliveInterval and ClientAliveCountMax
+
+        tty mode passing
+
+general:
+
+        gid swapping in sshd (fixes access to /home/group/user based
+        directory structures)
+
+        Dan Kaminsky <dankamin@cisco.com> contributed an experimental
+        SOCKS4 proxy to the ssh client (yes, client not the server).
+        Use 'ssh -D 1080 server' if you want to try this out.
+
+	server option PrintLastLog
+
+	improvements for scp > 2GB
+
+	improved ListenAddress option.
+	You can now use ListenAddress host:port
+
+	improved interoperability (bug detection for older implementations)
+
+	improved documentation
+
+OpenSSH is brought to you by Markus Friedl, Niels Provos, Theo de Raadt,
+Kevin Steves, Damien Miller and Ben Lindstrom.

@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>OpenSSH for OpenBSD</title>
+<link rev=made href="mailto:www@openbsd.org">
+<meta name="resource-type" content="document">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="description" content="OpenSSH for OpenBSD">
+<meta name="keywords" content="openssh,openbsd,main">
+<meta name="distribution" content="global">
+<meta name="copyright" content="This document copyright 1999-2006 by OpenBSD.">
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#23238E">
+<a href="index.html"><img alt="[OpenSSH]" height="30" width="141" src="images/smalltitle.gif" border="0"></a>
+<p>
+<h2><font color="#e00000">OpenSSH for OpenBSD</font></h2>
+<hr>
+
+Since OpenSSH is developed by the OpenBSD group, OpenSSH is included in
+the base operating system, starting at OpenBSD release 2.6.  So there's
+nothing to install or add to your system.  However, due to newer features
+or other patches, you may wish to upgrade.
+<p>
+
+You can download the current OpenSSH release from these
+<a href="ftp.html">ftp mirrors</a>.
+<p>
+
+The following versions of OpenSSH are available for putting on your
+OpenBSD machines:
+<p>
+
+<ul>
+
+<li><h3><font color="#e00000">OpenSSH 6.4: November 8, 2013</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.4.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.4.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-6.4.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 6.3: September 13, 2013</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.3.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.3.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-6.3.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 6.2: March 22, 2013</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.2.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.2.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-6.2.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 6.1: August 29, 2012</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.1.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.1.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-6.1.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 6.0: April 22, 2012</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.0.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-6.0.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-6.0.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.9: September 6, 2011</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.9.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.9.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 5.9 on OpenBSD 4.8 or 4.9,
+you need the one of the following patches:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd48_5.9.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd48_5.9.patch</a>
+for OpenBSD 4.8 or
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd49_5.9.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd49_5.9.patch</a>
+for OpenBSD 4.9.
+
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.9.tar.gz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd49_5.9.patch  # or openbsd48_5.9.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.8: February 4, 2011</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.8.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.8.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 5.8 on OpenBSD 4.7 or 4.8,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd48_5.8.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd48_5.8.patch</a>.
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.8.tar.gz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd48_5.8.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.7: January 24, 2011</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.7.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.7.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 5.7 on OpenBSD 4.7 or 4.8,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd48_5.7.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd48_5.7.patch</a>.
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.7.tar.gz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd48_5.7.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.6: August 23, 2010</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.6.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.6.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.6.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.5: April 16, 2010</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.5.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.5.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.5.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.4: March 8, 2010</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.4.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.4.tar.gz</a><p>
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.4.tar.gz
+# cd ssh
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.3: October 1, 2009</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.3.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.3.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 5.3 on OpenBSD 4.4,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd44_5.3.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd44_5.3.patch</a>.
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.3.tar.gz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd44_5.3.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+# mkdir /var/empty
+</pre>
+and restart sshd.
+
+<li><h3><font color="#e00000">OpenSSH 5.2: February 23, 2009</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.2.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.2.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 5.2 on OpenBSD 4.4,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd44_5.2.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd44_5.2.patch</a>.
+If you installing on OpenBSD 4.3, please use:
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_5.2.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_5.2.patch</a>.
+<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.2.tar.gz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd44_5.2.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+# mkdir /var/empty
+</pre>
+and restart sshd.
+
+<p>
+<li><h3><font color="#e00000">OpenSSH 5.1: July 21, 2008</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.1.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.1.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 5.1 on OpenBSD 4.3, 4.2 or 4.1,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_5.1.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_5.1.patch</a>.<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.1.tgz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd43_5.1.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+# mkdir /var/empty
+</pre>
+and restart sshd.
+
+<p>
+<li><h3><font color="#e00000">OpenSSH 5.0: April 3, 2008</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.0.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-5.0.tar.gz</a><p>
+<p>
+
+If you are installing OpenSSH 5.0 on OpenBSD 4.3, 4.2 or 4.1,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_5.0.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_5.0.patch</a>.<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-5.0.tgz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd43_5.0.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+# mkdir /var/empty
+</pre>
+and restart sshd.
+
+<p>
+<li><h3><font color="#e00000">OpenSSH 4.9: March 30, 2008</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.9.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.9.tar.gz</a><p>
+<p>
+
+<p>
+If you are installing OpenSSH 4.9 on OpenBSD 4.3, 4.2 or 4.1,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_4.9.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd43_4.9.patch</a>.<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-4.9.tgz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd43_4.9.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+# mkdir /var/empty
+</pre>
+and restart sshd.
+
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.7: September 4, 2007</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.7.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.7.tar.gz</a><p>
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.6: March 9, 2007</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.6.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.6.tar.gz</a><p>
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.5: November 7, 2006</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.5.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.5.tar.gz</a><p>
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.4: September 27, 2006</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.4.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.4.tar.gz</a><p>
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.3: February 1, 2006</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.3.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.3.tar.gz</a><p>
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.2: September 1, 2005</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.2.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.2.tar.gz</a><p>
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.1: May 26, 2005</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.1.tar.gz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.1.tar.gz</a><p>
+<p>
+
+If you are installing OpenSSH 4.1 on OpenBSD 3.5,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd35_4.1.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd35_4.1.patch</a>.<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-4.1.tar.gz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd35_4.1.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+</pre>
+and restart sshd.
+
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 4.0: March 9, 2005</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.0.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-4.0.tgz</a><p>
+
+If you are installing OpenSSH 4.0 on OpenBSD 3.5,
+you need the following patch:<br>
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd35_4.0.patch">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openbsd35_4.0.patch</a>.<p>
+
+<pre>
+# cd /usr/src/usr.bin
+# tar xvfz .../openssh-4.0.tgz
+# cd ssh
+# patch -p0 &lt; /path/to/openbsd3x_4.0.patch
+# make obj
+# make cleandir
+# make depend
+# make
+# make install
+# cp ssh_config sshd_config /etc/ssh
+# mkdir /var/empty
+</pre>
+and restart sshd.
+
+To support
+<a href="http://www.openbsd.org/cgi-bin/man.cgi?query=sshd&amp;sektion=8">sshd(8)</a>'s
+privilege separation feature on some older OpenBSD releases,
+a new user and group named <em>sshd</em>
+have been added to the system.  Add the following user entry using 
+<a href="http://www.openbsd.org/cgi-bin/man.cgi?query=vipw&amp;sektion=8">vipw(8)</a>:
+
+<pre>
+sshd:*:27:27::0:0:sshd privsep:/var/empty:/sbin/nologin
+</pre>
+<p>Add the following to <tt>/etc/group</tt>:</p>
+<pre>
+sshd:*:27:
+_sshagnt:*:34:
+</pre>
+
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 3.9: August 17, 2004</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.9.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.9.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.8: February 24, 2004</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.8.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.8.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.7.1: September 16, 2003</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.7.1.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.7.1.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.7: September 16, 2003</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.7.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.7.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.6.1: April 1, 2003</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.6.1.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.6.1.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.6: March 31, 2003</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.6.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.6.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.5: October 14, 2002</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.5.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.5.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.4: June 26, 2002</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.4.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.4.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.3: June 21, 2002</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.3.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.3.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.2.3: May 22, 2002</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.2.3.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.2.3.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.2.2: May 17, 2002</font></h3><p>
+
+We replaced the 3.2.2 release with 3.2.3 because of a bug
+in the BSD_AUTH access control code, login/tty problems
+on Solaris and build problems on Cygwin systems.
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 3.1: March 7, 2002</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.1.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.1.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.0.2: December 3, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.0.2.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.0.2.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.0.1: November 15, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.0.1.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.0.1.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 3.0: November 6, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.0.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-3.0.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.9.9: September 25, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.9.9.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.9.9.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.9: May 1, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.9.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.9.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.5.2: Mar 19, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.5.2.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.5.2.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.5.1: Feb 19, 2001</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.5.1.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.5.1.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.5.0: Feb 16, 2001</font></h3><p>
+
+We replaced the 2.5.0 release with 2.5.1 because a change we made triggered
+bugs in ssh-1.2.18 - ssh-1.2.22.
+<p>
+
+<li><h3><font color="#e00000">OpenSSH 2.3.0: Nov 6, 2000</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.3.0.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.3.0.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.2.0: Aug 31, 2000</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.2.0.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.2.0.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.1.1: June 8, 2000</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.1.1.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.1.1.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 2.1.0: May 8, 2000</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.1.0.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-2.1.0.tgz</a><p>
+
+<li><h3><font color="#e00000">OpenSSH 1.2.3: released March 6, 2000</font></h3><p>
+
+<a href="ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-1.2.3.tgz">
+ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/openssh-1.2.3.tgz</a>
+</ul>
+
+If you are interested in seeing if there are any OpenSSH patches,
+see the
+<a href="http://www.openbsd.org/errata.html">OpenBSD errata pages</a>.
+<p>
+
+<hr>
+<a href="index.html"><img height=24 width=24 src=back.gif border=0 alt=OpenSSH></a>
+<a href="mailto:www@openbsd.org">www@openbsd.org</a>
+<br>
+<small>$OpenBSD: openbsd.html,v 1.95 2013/11/08 03:10:54 djm Exp $</small>
+
+</body>
+</html>

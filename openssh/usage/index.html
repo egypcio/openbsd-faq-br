@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SSH usage profiling</title>
+<link rev="made" href="mailto:www@openbsd.org">
+<meta name="resource-type" content="document">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="SSH usage profiling">
+<meta name="keywords" content="SSH scanning profiling usage internet">
+<meta name="distribution" content="global">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#2323aa">
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr>
+<td bgcolor="99bbed" rowspan="2" valign=top>
+<h3><a href="index.html">Main page</a></h3>
+<h3><a href="ssh-stats.html">Statistics</a></h3>
+<h3><a href="graphs.html">Graphs</a></h3>
+<h3><a href="http://www.monkey.org/~provos/scanssh/">ScanSSH</a></h3>
+</td>
+    <td bgcolor="eebb55" rowspan="2"><font size="1">&nbsp;</font></td>
+    <td bgcolor="ffffff" valign="top">
+
+<center>
+<img src="scan.gif" alt=Scan>
+</center>
+<center>
+<h2>Graphs from past measurements</h2>
+<table>
+<tr><td>
+<a href="graphs.html"><img src="graphs/internet-versions-tiny.png" alt=Versions></a>
+<p>
+<center>SSH protocol versions on the Internet.</center>
+</td><td>
+<a href="graphs.html"><img src="graphs/internet-type-tiny.png" alt=Type></a>
+<p>
+<center>SSH implementations on the Internet.</center>
+</td></tr> 
+</table>
+</center>
+<center>
+<h1>SSH usage profiling</h1>
+</center>
+<p> This machine is involved in a project to profile the versions of
+Secure Shell (SSH) servers in use on the Internet. This project is
+very similar to the <a href="http://www.netcraft.com/survey/">Netcraft
+Web Server Survey</a>.  We are collecting and collating random
+samples of hosts on the Internet providing SSH service. We then
+connect to each one to determine the server and protocol version from
+the connection dialogue. The results will be used to publish data on
+the usage of the SSH protocol on the Internet at large. We intend to
+publish our results both on the web and at a forthcoming Usenix
+conference. 
+
+<p> We will <em>not</em> do more than a cursory look at the
+connection string of your machine. The scanner will not attempt to log in to
+your machine.  No repeated connections will be made to your machine
+as the scanner generates only unique random addresses on the
+Internet.
+
+<p> No address or domain specific information will be supplied to anyone outside
+the project itself, only the conclusions. We will <em>not</em> publish
+any details of what hosts are running what versions.  
+
+<p> Statistics from our current scan results can be found
+<a href="ssh-stats.html">here</a>.
+The scans were conducted with the 
+<a href="http://www.monkey.org/~provos/scanssh/">scanssh</a> software.
+<p>
+<hr>
+<em>This site Copyright &copy; 2001-2006 OpenBSD.</em><br>
+<small>$OpenBSD: index.html,v 1.10 2008/07/21 23:50:16 djm Exp $</small>
+</td>
+</tr>
+</table>
+</body>
+</html>
